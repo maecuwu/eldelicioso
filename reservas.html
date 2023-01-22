@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--Etiquetas necesarias-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Titulo-->
+    <title>ElDelicioso</title>
+
+    <!--Icono-->
+    <link rel="icon" type="image/png" href="images/logo_transparent.png" />
+
+    <!--Bosstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!--Enlaces internos-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RG2RF5BL53"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RG2RF5BL53');
+    </script>
+
+</head>
+
+<body>
+
+
+    <main class="container-fluid">
+
+        <!----------------------------------- Loading screen ----------------------------------->
+
+        <section class="container-fluid loading" id="loading">
+            <img src="images/logo.png" alt="Logo" class="logo_loading">
+            <h1 class="loading_h1">Loading
+                <div class="dots"><span class="dot z"></span><span class="dot f"></span><span class="dot s"></span><span class="dot t"><span class="dot l"></span></span>
+                </div>
+            </h1>
+            <div class="loading_line"></div>
+
+        </section>
+
+        <!--------------------------------------------------------------------------------------->
+
+        <nav class="navbar navbar-expand-lg navbar_menu" id="navbar">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/transparent_logo.png" id="nav_logo_img" alt="Logo" class="nav_logo_img">
+            </a>
+            <button class="navbar-toggler" type="button" onclick="changeButtonToggle(this)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="bar1 bar"></div>
+                <div class="bar2 bar"></div>
+                <div class="bar3 bar"></div>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav_link_after_white" href="index.html#inicio">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav_link_after_white" href="sobrenosotros.html">EL DELICIOSO</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link nav_link_after_white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MENU <svg viewBox='0 0 140 140' width='16' height='16' xmlns='http://www.w3.org/2000/svg'><g><path d='m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z' fill='white' id="nav_dropdown_arrow"/></g></svg>
+                  </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="recetaschef.html">RECETAS DE NUESTRO CHEF</a>
+                            <a class="dropdown-item" href="recetaspartedinosaurio.html">PARTES DE DINOSAURIO</a>
+
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav_link_after_white" href="reservas.html">RESERVA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav_link_after_white" href="index.html#contact-us">CONTACTO</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+
+
+        <!-- nombre apellidos telefono n personas fecha para reservar observaciones -->
+
+
+        <section class="container-fluid reservas" style="padding-top: 80px;">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 aboutus_div_title">
+                    <h2 class="text-white titulo_aboutus">RESERVAR</h2>
+                </div>
+            </div>
+            <div class="container">
+                <form action="reservas.php" method="post">
+                    <div class="row ta-c av-c mt-5" style="height: 60vh;">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="contactus_labels"> Nombre *</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-floating mb-3 contactus_inputs">
+                                        <input type="text" class="form-control contactus_form_input" id="Nombre" placeholder="Nombre" required name="nombre">
+                                        <label for="Nombre">
+                                                Nombre
+                                            </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-12">
+                                    <p class="contactus_labels"> Apellidos *</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-floating mb-3 contactus_inputs">
+                                        <input type="text" class="form-control contactus_form_input" id="Apellidos" placeholder="Apellidos" required name="apellidos">
+                                        <label for="Apellidos">
+                                                Apellidos
+                                            </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-12">
+                                    <p class="contactus_labels"> Telefono *</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-floating mb-3 contactus_inputs">
+                                        <input type="text" class="form-control contactus_form_input" id="Telefono" placeholder="Telefono" required name="telefono">
+                                        <label for="Telefono">
+                                                Telefono
+                                            </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="contactus_labels"> Nº Personas *</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-floating mb-3 contactus_inputs">
+                                        <select class="form-select contactus_form_input" aria-label="Default select example" required name="personas">
+                                                <option value="1" selected>1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        <label for="NombreyApellidos">
+                                                Nº Personas
+                                            </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-12">
+                                    <p class="contactus_labels"> Fecha *</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-floating mb-3 contactus_inputs">
+                                        <input type="date" class="form-control contactus_form_input" id="Fecha" placeholder="Fecha" required name="fecha">
+                                        <label for="Fecha">
+                                                Fecha
+                                            </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col-12">
+                                    <p class="contactus_labels"> Observaciones </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-floating mb-3 contactus_inputs">
+                                        <textarea class="form-control contactus_form_input contactus_textarea" placeholder="Escribe tu mensaje" id="mensaje"></textarea>
+                                        <label for="NombreyApellidos">
+                                                Observaciones
+                                            </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12 ta-c">
+                            <input type="submit" value="ENVIAR" name="Enviar" class="btn contactus_button">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 reservas_div_maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1702699.0697540245!2d-91.98151392873773!3d15.633129946566216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa9f529a75fb0307f%3A0x4a1c9a9542cd2c8c!2sEl%20Delicioso!5e0!3m2!1ses!2ses!4v1648121442762!5m2!1ses!2ses"
+                        class="reservas_maps" loading="lazy"></iframe>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+        <footer class="footer mt-5">
+            <!-- Footer -->
+            <div class="container" style="padding-top: 40px;">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <a href="index.html"><img src="images/logo.png" alt="" width="180" class="mb-3 footer_logo"></a>
+                        <p class="font-italic ">El Delicioso, restaurante de actualidad. </p>
+
+                    </div>
+                    <div class="col-lg-2">
+                        <h6 class="text-uppercase font-weight-bold mb-4 ">Contactanos</h6>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">906552001</li>
+                            <li class="mb-2">677686542</li>
+                            <li class="mb-2">Madrid, Madrid</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 ">
+                        <h6 class="text-uppercase font-weight-bold mb-4">Trabaja con nosotros</h6>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">Acogida y formación</li>
+                            <li class="mb-2">Ofertas de trabajo</li>
+                            <li class="mb-2">Envia tu CV</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <h6 class="text-uppercase font-weight-bold mb-4">Síguenos</h6>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">Facebook</li>
+                            <li class="mb-2">Twitter</li>
+                            <li class="mb-2">Instagram</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer pb-3">
+                <div class="container text-center">
+                    <hr>
+                    <p class="mt-1 copy">Copyright© 2022 ElDelicioso. <b>Delicioso's</b> All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- <script type="text/javascript" src="js/scroll.js"></script> -->
+</body>
+
+</html>

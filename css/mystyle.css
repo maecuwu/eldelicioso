@@ -1,0 +1,80 @@
+/*Container-fluid margin padding 0*/
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*clasesdefinidias*/
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.mt-200 {
+    margin-top: 200px;
+}
+
+.mt-300 {
+    margin-top: 300px;
+}
+
+.mt-400 {
+    margin-top: 400px;
+}
+
+.ml-50 {
+    margin-left: 50px;
+}
+
+.ml-100 {
+    margin-left: 100px;
+}
+
+.mr-0 {
+    margin-right: 0px;
+}
+
+.wh100p {
+    width: 100%;
+    height: 100%;
+}
+
+.wh80p {
+    width: 80%;
+    height: 80%;
+}
+
+.h100vh {
+    height: 100vh;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+.ta-s {
+    text-align: start;
+}
+
+.ta-e {
+    text-align: end;
+}
+
+.av-c {
+    display: flex;
+    align-items: center;
+}
+
+
+/**/
+
+.img100 {
+    width: 100%;
+    height: 100%;
+}
